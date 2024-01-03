@@ -3,16 +3,11 @@ package com.ems.model;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
+//@Getter
+//@Setter
+//@NoArgsConstructor
+//@AllArgsConstructor
 public class EmployeeModel {
 	 private Integer id;
 	 private String firstName;

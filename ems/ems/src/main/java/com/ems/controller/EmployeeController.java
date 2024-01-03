@@ -12,12 +12,11 @@ import com.ems.model.EmployeeModel;
 import com.ems.service.EmployeeServiceImpl;
 
 @RestController
-@RequestMapping("api")
+@RequestMapping("/api")
 public class EmployeeController {
+
 	@Autowired
 	private EmployeeServiceImpl empServiceImpl;
-
-
 
 	@PostMapping("/emp")
 	public ResponseEntity<EmployeeModel> addStudentDetails(@RequestBody EmployeeModel request) {
@@ -25,7 +24,7 @@ public class EmployeeController {
 			EmployeeModel response = empServiceImpl.addEmp(request);
 			return new ResponseEntity<>(response, HttpStatus.OK);
 		} catch (Exception e) {
-			 return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
 		}
 	}
 }

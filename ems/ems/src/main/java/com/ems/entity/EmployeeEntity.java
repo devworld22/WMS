@@ -9,17 +9,11 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Entity
-@Getter
-@Setter
 @Table(name="emp_details")
 @NoArgsConstructor
-@AllArgsConstructor
 public class EmployeeEntity {
 	 @Id
 	 private Integer id;
@@ -135,29 +129,10 @@ public class EmployeeEntity {
 	public void setUpdatedBy(String updatedBy) {
 		this.updatedBy = updatedBy;
 	}
-	public EmployeeEntity(Integer id, @Valid String firstName, String lastName,
-			@Email(message = "Invalid email format") String emailId, LocalDate dob, String phoneNumber, String gender,
-			Integer addressIdk, Integer organizationIdk, Boolean isActive, LocalDateTime createdTime,
-			LocalDateTime updatedTime, String createdBy, String updatedBy) {
-		super();
-		this.id = id;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.emailId = emailId;
-		this.dob = dob;
-		this.phoneNumber = phoneNumber;
-		this.gender = gender;
-		this.addressIdk = addressIdk;
-		this.organizationIdk = organizationIdk;
-		this.isActive = isActive;
-		this.createdTime = createdTime;
-		this.updatedTime = updatedTime;
-		this.createdBy = createdBy;
-		this.updatedBy = updatedBy;
-	}
-	public EmployeeEntity() {
-		super();
-	}
+	
+//	public EmployeeEntity() {
+//		super();
+//	}
 	 
 	 
 }
